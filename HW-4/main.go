@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var n int
+	/*var n int
 	fmt.Scanln(&n)
 	m := make([]int, n, n)
 	for i, _ := range m {
@@ -15,7 +15,25 @@ func main() {
 	//fmt.Println(res)
 	for i, _ := range res {
 		fmt.Print(res[i], " ")
+	}*/
+	var n int
+	fmt.Scanln(&n)
+
+	matrix := make([][]int, n, n)
+	for i, _ := range matrix {
+		matrix[i] = make([]int, 3, 3)
+		for j, _ := range matrix[i] {
+			fmt.Scan(&matrix[i][j])
+		}
 	}
+	/////////////
+	for i, _ := range matrix {
+		for j, _ := range matrix[i] {
+			fmt.Print(matrix[i][j], " ")
+		}
+		fmt.Println()
+	}
+
 }
 
 // функция слияния двух отсортированных массивов в один отсортированный

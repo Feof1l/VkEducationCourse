@@ -1,5 +1,5 @@
 ## Aлгоритмы и структуры данных
-
+https://education.vk.company/curriculum/program/lesson/25129/
 
 ### Домашнее задание 2:
 

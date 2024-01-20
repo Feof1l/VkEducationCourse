@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 	/*var n int
@@ -18,20 +21,56 @@ func main() {
 	}*/
 	var n int
 	fmt.Scanln(&n)
-
-	matrix := make([][]int, n, n)
+	count := make([]int, n, n)
+	name := make([]string, n, n)
+	year := make([]int, n, n)
+	matrix := make([][]string, n, n)
 	for i, _ := range matrix {
-		matrix[i] = make([]int, 3, 3)
+		matrix[i] = make([]string, 3, 3)
 		for j, _ := range matrix[i] {
 			fmt.Scan(&matrix[i][j])
 		}
 	}
+	for i, _ := range matrix {
+		for j, _ := range matrix[i] {
+			switch j {
+			case 0:
+				{
+					elem, _ := strconv.Atoi(matrix[i][j])
+					//count = append(count, elem)
+					count[i] = elem
+				}
+			case 1:
+				{
+					//name = append(name, matrix[i][j])\
+					name[i] = matrix[i][j]
+				}
+			case 2:
+				{
+					elem, _ := strconv.Atoi(matrix[i][j])
+					//year = append(year, elem)
+					year[i] = elem
+				}
+			}
+
+		}
+	}
+	fmt.Println(name)
+	fmt.Println(year)
+	fmt.Println(count)
+	fmt.Println()
 	/////////////
 	for i, _ := range matrix {
 		for j, _ := range matrix[i] {
-			fmt.Print(matrix[i][j], " ")
+			fmt.Print(matrix[i][j], " ", i, j)
 		}
 		fmt.Println()
+	}
+	fmt.Println()
+	res := make([]int, n, n)
+	BottomUpMergeSort(year, res, n)
+	for i, _ := range res {
+		fmt.Print(res[i], " i=", i, " ")
 	}
 
 }

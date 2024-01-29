@@ -12,6 +12,7 @@ func main() {
 	fmt.Println(hash(mas))
 	/*var n int
 	fmt.Scanln(&n)
+	//
 	mas := make([]int, n, n)
 	for i, _ := range mas {
 		fmt.Scan(&mas[i])

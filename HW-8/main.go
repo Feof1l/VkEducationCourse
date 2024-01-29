@@ -12,9 +12,9 @@ func main() {
 	var p int
 	fmt.Scanln(&p)
 	//fmt.Println(n, p, mas)
-	fmt.Println(Seach(mas, p))
+	fmt.Println(Search(mas, p))
 }
-func Seach(mas []int, p int) int {
+func Search(mas []int, p int) int {
 	l := 0
 	r := len(mas) - 1
 	var mid int

@@ -12,10 +12,10 @@ func main() {
 	var p int
 	fmt.Scanln(&p)
 	//fmt.Println(n, p, mas)
-	fmt.Println(BinarySeach(mas, p))
+	fmt.Println(BinarySearch(mas, p))
 
 }
-func BinarySeach(mas []int, p int) bool {
+func BinarySearch(mas []int, p int) bool {
 	l := 0
 	r := len(mas) - 1
 	for l <= r {

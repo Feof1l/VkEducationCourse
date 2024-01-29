@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	// for task B
 	/*var s string
 	fmt.Scanln(&s)
 	fmt.Println(maxLiteral(s))
